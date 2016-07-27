@@ -40,7 +40,7 @@ if ( !class_exists('\Cmb2MultidatesPicker\Cmb2MultidatesPicker') ) {
 	class Cmb2MultidatesPicker extends DesignPatterns\Singleton {
 		public function __construct() {
 			add_action('cmb2_admin_init', array($this, 'addFields'));
-			new Tests\Tests();
+			//new Tests\Tests();
 		}
 		
 		public function addFields(){
