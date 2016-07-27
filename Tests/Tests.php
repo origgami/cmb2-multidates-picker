@@ -17,9 +17,6 @@ if ( !class_exists('\Cmb2MultidatesPicker\Tests\Tests') ) {
 
 		public function testCmb() {
 			$prefix = '_mdpt_';
-			/**
-			 * Sample metabox to demonstrate each field type included
-			 */
 			$cmb_demo = new_cmb2_box(array(
 				'id'			 => $prefix . 'metabox',
 				'title'			 => __('Test Metabox', 'cmb2'),
@@ -27,14 +24,16 @@ if ( !class_exists('\Cmb2MultidatesPicker\Tests\Tests') ) {
 			));
 
 			$cmb_demo->add_field(array(
-				'name'					 => __('Test Text', 'cmb2'),
-				'desc'					 => __('field description (optional)', 'cmb2'),
-				'id'					 => $prefix . 'dates',
-				'type'					 => 'multidates',
+				'name'	 => __('Test Text', 'cmb2'),
+				'desc'	 => __('field description (optional)', 'cmb2'),
+				'id'	 => $prefix . 'dates',
+				'type'	 => 'multidates',
+				
+				//Any value from http://multidatespickr.sourceforge.net
 				'multidates_params' => array(
-					
+					//'maxPicks'	 => 3,
+					//'dateFormat'   => "y-m-d",
 				),
-				'show_on_cb'			 => 'yourprefix_hide_if_no_cats', // function should return a bool value
 			));
 		}
 
