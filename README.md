@@ -27,8 +27,7 @@ $cmb_demo->add_field(array(
 
 ## OPTIONS
 
-As it uses [MultiDatesPicker v1.6.3 for jQuery UI](http://multidatespickr.sourceforge.net/), you can use a bunch of parameters from both MultiDatesPicker and also [JqueryUI Datepicker](http://api.jqueryui.com/datepicker/) itself.
-You only have to use the **'multidates_params'** like the code above. Example:
+As it uses [MultiDatesPicker v1.6.3 for jQuery UI](http://multidatespickr.sourceforge.net/), you can use all of the parameters from both [MultiDatesPicker](http://multidatespickr.sourceforge.net/) and also [JqueryUI Datepicker](http://api.jqueryui.com/datepicker/) itself. These are some interesting parameters i could check, but like i said, there are a bunch of them
 
 ```php
 'multidates_params' => array(
