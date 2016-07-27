@@ -1,7 +1,7 @@
 # Cmb2-multidates-picker
 Creates a CMB2 field that enables a multiple date calendar. It uses a plugin called [MultiDatesPicker v1.6.3 for jQuery UI](http://multidatespickr.sourceforge.net/)
 
-## USAGE
+## Usage
 Create your cmb2 metabox like you are used to, but on your field, use the type **attribute => 'multidates'**
 
 ```php
@@ -25,7 +25,7 @@ $cmb_demo->add_field(array(
 ));
 ```
 
-## OPTIONS
+## Options
 
 As it uses [MultiDatesPicker v1.6.3 for jQuery UI](http://multidatespickr.sourceforge.net/), you can use all of the parameters from both [MultiDatesPicker](http://multidatespickr.sourceforge.net/) and also [JqueryUI Datepicker](http://api.jqueryui.com/datepicker/) itself. These are some interesting parameters i could check, but like i said, there are a bunch of them
 
