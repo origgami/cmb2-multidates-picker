@@ -1,0 +1,11 @@
+.ui-state-highlight *, .ui-widget-content .ui-state-highlight *, .ui-widget-header .ui-state-highlight *{
+	background:green !important;
+	color:#fff !important;
+}
+
+table.ui-datepicker-calendar {border-collapse: separate !important;}
+.ui-datepicker-calendar td {border: 1px solid transparent !important;}
+
+.hidden{
+	display:none;
+}
