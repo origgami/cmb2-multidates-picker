@@ -1,7 +1,7 @@
-# cmb2-multidates-picker
+# Cmb2-multidates-picker
 Creates a CMB2 field that enables a multiple date calendar. It uses a plugin called [MultiDatesPicker v1.6.3 for jQuery UI](http://multidatespickr.sourceforge.net/)
 
-## Usage
+## USAGE
 Create your cmb2 metabox like you are used to, but on your field, use the type **attribute => 'multidates'**
 
 ```php
