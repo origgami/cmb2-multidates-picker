@@ -16,16 +16,18 @@ namespace Cmb2MultidatesPicker;
 
 //SETUP AUTOLOAD ======================================================================
 spl_autoload_register(function($class) {
-	if (false !== strpos($class, 'Cmb2MultidatesPicker')) {
-		if (!class_exists($class)) {			
-			$dir = plugin_dir_path( __FILE__ );
+	if ( false !== strpos($class, __NAMESPACE__) ) {
+		if ( !class_exists($class) ) {
+			$dir = plugin_dir_path(__FILE__);
 			$classes_dir = $dir;
-			$class_file	 = str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
-			$class_file	 = preg_replace('/Cmb2MultidatesPicker\\\\/', '', $class) . '.php';
-			$file		 = $classes_dir . $class_file;
-			if (file_exists($file)) {
+			$class_file = str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
+			$class_file = str_replace(__NAMESPACE__.DIRECTORY_SEPARATOR, '',$class_file);
+			$file = $classes_dir . $class_file;
+			if ( file_exists($file) ) {
 				require_once $file;
-			} 			
+			}else{
+				error_log( 'ERROR LOADING FILE: '.  print_r($file , true ) );
+			}
 		}
 	}
 });
