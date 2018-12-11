@@ -59,10 +59,10 @@ if ( !class_exists('\Cmb2MultidatesPicker\Fields\MultidatesPicker') ) {
 					};
 					var pickerParams = <?php echo $multidatesParamsJs; ?>;
 					jQuery.extend(params, pickerParams);
-					<?php if ( is_array($escaped_value) && count($escaped_value > 0) ) { ?>
+					if ( document.getElementById('<?php echo $field->args['id']; ?>').value !== '' ) {
 						var dates = <?php echo $datesJs; ?>;
-						params.addDates=dates;
-					<?php } ?>
+						params.addDates = dates;
+					}
 					jQuery('#<?php echo $fieldName; ?>').multiDatesPicker(params);
 				</script>
 			<?php
