@@ -48,7 +48,7 @@ if ( !class_exists('\Cmb2MultidatesPicker\Fields\MultidatesPicker') ) {
 			
 			$fieldName = 'multidatespicker'.$field->args['id'];
 			echo '<div id="'.$fieldName.'"></div>';
-			$valueStr = is_array($escaped_value) && count($escaped_value > 0) ? implode(", ",$escaped_value) : '' ;
+			$valueStr =  (is_array($escaped_value) && (count($escaped_value) > 0) ) ? implode(", ",$escaped_value) : '' ;
 			echo $field_type_object->input(array('type' => 'text','class'=>'hidden','value'=>$valueStr));
 			$datesJs = wp_json_encode($escaped_value);
 			$multidatesParamsJs = wp_json_encode($multidatesParams);
@@ -59,7 +59,7 @@ if ( !class_exists('\Cmb2MultidatesPicker\Fields\MultidatesPicker') ) {
 					};
 					var pickerParams = <?php echo $multidatesParamsJs; ?>;
 					jQuery.extend(params, pickerParams);
-					<?php if ( is_array($escaped_value) && count($escaped_value > 0) ) { ?>
+					<?php if ( is_array($escaped_value) && count($escaped_value)>0 ) { ?>
 						var dates = <?php echo $datesJs; ?>;
 						params.addDates=dates;
 					<?php } ?>
